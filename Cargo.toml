@@ -1,0 +1,28 @@
+[package]
+name = "deltalake-examples-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies]
+deltalake = {version = "0.9.0", features = ["arrow", "parquet", "datafusion", "s3"]}
+tokio = {version = "1.27.0", features = ["macros", "rt-multi-thread" ]}
+serde = "1"
+serde_json = "1"
+
+[[example]]
+name = "create"
+path = "examples/01_create/main.rs"
+
+[[example]]
+name = "write"
+path = "examples/02_write/main.rs"
+
+[[example]]
+name = "query"
+path = "examples/03_query/main.rs"
+
+[[example]]
+name = "partitioned"
+path = "examples/04_partitioned/main.rs"
